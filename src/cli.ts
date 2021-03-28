@@ -2,15 +2,6 @@ import * as path from 'path';
 import * as cli from 'yargs';
 
 (async () => {
-  if (
-    process.argv.includes('help') ||
-    process.argv.includes('--help') ||
-    process.argv.includes('-h')
-  ) {
-    console.log('otto');
-    console.log('\n===========================\n\n');
-    console.log('Your friendly neighborhood test automator!');
-  }
 
   // eslint-disable-next-line no-unused-expressions
   cli
