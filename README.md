@@ -4,7 +4,7 @@ Follow the below todos to get started with this template.
 
 - [ ] Add your code
 - [ ] Add documentation on how to use your code
-- [ ] Create an npm publish token for this repository and add as a secret `NPM_PUBLISH_TOKEN`
+- [X] Create an npm publish token for this repository and add as a secret `NPM_PUBLISH_TOKEN`
 - [ ] Remove everything above and including the `<hr>`
 
 <hr>
