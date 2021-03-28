@@ -1,0 +1,1 @@
+{"version":3,"file":"foo.js","sourceRoot":"","sources":["../../src/commands/foo.ts"],"names":[],"mappings":";;;AAAa,QAAA,OAAO,GAAG,KAAK,CAAC;AAEhB,QAAA,QAAQ,GAAG,eAAe,CAAC;AAE3B,QAAA,OAAO,GAAG,EAAE,CAAC;AAEnB,KAAK,UAAU,OAAO,CAAC,IAAS;IACtC,OAAO,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC;AACpB,CAAC;AAFD,0BAEC"}

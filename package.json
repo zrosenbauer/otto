@@ -6,6 +6,9 @@
   "repository": "git@github.com:bluenovaio/blueprint-npm-typescript.git",
   "author": "@bluenovaio",
   "license": "MIT",
+  "bin": {
+    "otto": "./cli.js"
+  },
   "private": false,
   "scripts": {
     "build": "tsc",
@@ -15,7 +18,9 @@
     "lint": "eslint src/**/*.ts",
     "test": "jest --passWithNoTests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "yargs": "^16.2.0"
+  },
   "devDependencies": {
     "@jest/types": "^26.6.2",
     "@types/jest": "^26.0.20",

@@ -1,0 +1,1 @@
+{"version":3,"file":"bar.js","sourceRoot":"","sources":["../../src/commands/bar.ts"],"names":[],"mappings":";;;AAAa,QAAA,OAAO,GAAG,KAAK,CAAC;AAEhB,QAAA,QAAQ,GAAG,uBAAuB,CAAC;AAEnC,QAAA,OAAO,GAAG,EAAE,CAAC;AAEnB,KAAK,UAAU,OAAO,CAAC,IAAS;IACtC,OAAO,CAAC,GAAG,CAAC,mBAAmB,CAAC,CAAC;AAClC,CAAC;AAFD,0BAEC"}
