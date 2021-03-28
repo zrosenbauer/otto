@@ -2,6 +2,7 @@
 
 Follow the below todos to get started with this template.
 
+- [ ] Update the package.json to the correct name & version
 - [ ] Add your code
 - [ ] Add documentation on how to use your code
 - [X] Create an npm publish token for this repository and add as a secret `NPM_PUBLISH_TOKEN`
