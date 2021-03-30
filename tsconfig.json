@@ -23,7 +23,7 @@
   ],
   "include": [
     "src/**/*"
-  ],
+,   "src/cli.ts"  ],
   "exclude": [
     "node_modules/**/*",
     "**/__tests__/**"
