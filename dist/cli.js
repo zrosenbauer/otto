@@ -22,17 +22,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path = __importStar(require("path"));
 const cli = __importStar(require("yargs"));
 (async () => {
-    /*if (
-      process.argv.includes('help') ||
-      process.argv.includes('--help') ||
-      process.argv.includes('-h')
-    ) {
-      console.log('\n');
-      console.log('Hello my name is Otto.');
-      console.log('--------------------------------------------');
-      console.log('Your friendly neighborhood test automator!');
-      console.log('\n');
-    }*/
     // eslint-disable-next-line no-unused-expressions
     cli
         .scriptName('otto')
