@@ -8,7 +8,6 @@
 
 **npm**
 ```
-Install the package and take a look at the commands available. If you have issues or questions, feel free to create an issue and tag @srosenbauer and @zrosenbauer.
 ```
 
 **yarn**
