@@ -1,9 +1,9 @@
 {
-  "name": "blueprint-npm-typescript",
-  "version": "1.0.0",
-  "description": "Template repository for TypeScript npm packages",
+  "name": "@bluenova/otto",
+  "version": "0.0.1",
+  "description": "Otto will help you automate away maintaining e2e tests.",
   "main": "dist/main.js",
-  "repository": "git@github.com:bluenovaio/blueprint-npm-typescript.git",
+  "repository": "git@github.com:bluenovaio/otto.git",
   "author": "@bluenovaio",
   "license": "MIT",
   "bin": {

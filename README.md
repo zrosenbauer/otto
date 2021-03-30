@@ -1,31 +1,17 @@
-# Getting Started
+# otto
 
-Follow the below todos to get started with this template.
+The BlueNova Otto CLI gives you the ability to interface with the BlueNova testing automation system to run and orchestrate e2e tests. Otto is here to automate you're manual testing!
 
-- [ ] Update the package.json to the correct name & version
-- [ ] Add your code
-- [ ] Add documentation on how to use your code
-- [X] Create an npm publish token for this repository and add as a secret `NPM_PUBLISH_TOKEN`
-- [ ] Remove everything above and including the `<hr>`
-
-<hr>
-
-# <TITLE>
-
-> Add a description of the package
 
 ## Getting Started
 
-> Add a short description if needed
+Install the package and take a look at the commands available. If you have issues or questions, feel free to create an issue and tag @srosenbauer and @zrosenbauer.
 
 **npm**
 ```
-npm install <PACKAGE>
 ```
 
 **yarn**
 ```
-yarn add <PACKAGE>
+yarn add bluenova/otto
 ```
-
-> Add a directions on how to use as a CLI or as a package
