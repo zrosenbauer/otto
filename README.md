@@ -1,6 +1,7 @@
 # Otto CLI
 
-> The BlueNova Otto CLI gives you the ability to interface with the BlueNova testing automation system to run and orchestrate e2e tests. Otto is here to automate you're manual testing!
+The BlueNova Otto CLI gives you the ability to interface with the BlueNova testing automation system to run and orchestrate e2e tests. Otto is here to automate you're manual testing!
+
 
 ## Getting Started
 
