@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/bluenovaio/otto/actions/workflows/ci.yaml/badge.svg)](https://github.com/bluenovaio/otto/actions/workflows/ci.yaml)
 [![Publish](https://github.com/bluenovaio/otto/actions/workflows/publish.yaml/badge.svg)](https://github.com/bluenovaio/otto/actions/workflows/publish.yaml)
+[![codecov](https://codecov.io/gh/bluenovaio/otto/branch/main/graph/badge.svg?token=LYQZKFGV28)](https://codecov.io/gh/bluenovaio/otto)
 
 The BlueNova Otto CLI gives you the ability to interface with the BlueNova testing automation system to run and orchestrate e2e tests. Otto is here to automate you're manual testing!
 
