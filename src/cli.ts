@@ -2,7 +2,6 @@ import * as path from 'path';
 import * as cli from 'yargs';
 
 (async () => {
-
   // eslint-disable-next-line no-unused-expressions
   cli
     .scriptName('otto')

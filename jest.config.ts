@@ -14,7 +14,11 @@ const config: Config.InitialOptions = {
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
-  }
+  },
+  collectCoverageFrom: [
+    './src/**/*',
+    '!./src/**/__otto__/*'
+  ]
 };
 
 export default config;
