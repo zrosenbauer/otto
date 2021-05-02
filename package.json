@@ -1,6 +1,6 @@
 {
   "name": "@bluenova/otto",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Otto will help you automate away maintaining e2e tests.",
   "main": "dist/main.js",
   "repository": "git@github.com:bluenovaio/otto.git",
