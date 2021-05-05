@@ -1,9 +1,9 @@
-import * as ottoBrowser from '@bluenova/otto-browser';
+import * as ottoBrowser from '../../../otto-browser/src/main';
 import { v4 as uuid } from 'uuid';
 import * as _ from 'lodash';
 
 export interface Props {
-  addAction (action: ottoBrowser.DOMAction): void
+  addAction (action: ottoBrowser.Action): void
 
   selector: string;
 }
@@ -14,7 +14,7 @@ export interface Props {
  */
 export class DOMElement {
   public selector: string;
-  public addAction: Props['addAction'];
+  public readonly addAction: Props['addAction'];
 
   constructor (props: Props) {
     this.selector = props.selector;
@@ -31,6 +31,60 @@ export class DOMElement {
     this.addAction({
       type: 'click',
       id: uuid(),
+      selector: this.selector
+    });
+    return this;
+  }
+
+  /**
+   * Send a select event for an option list.
+   */
+  public select (values: string[]): DOMElement {
+    const id = uuid();
+    this.addAction({
+      type: 'select',
+      id,
+      value: values,
+      selector: this.selector
+    });
+    return this;
+  }
+
+  /**
+   * Send type events to an input or textarea field.
+   */
+  public type (value: string): DOMElement {
+    const id = uuid();
+    this.addAction({
+      type: 'type',
+      id,
+      value,
+      selector: this.selector
+    });
+    return this;
+  }
+
+  /**
+   * Send a check event to a checkbox input.
+   */
+  public check (): DOMElement {
+    const id = uuid();
+    this.addAction({
+      type: 'check',
+      id,
+      selector: this.selector
+    });
+    return this;
+  }
+
+  /**
+   * Send an ucheck event to a checkbox input.
+   */
+  public uncheck (): DOMElement {
+    const id = uuid();
+    this.addAction({
+      type: 'uncheck',
+      id,
       selector: this.selector
     });
     return this;
@@ -98,7 +152,7 @@ export class DOMElement {
         ],
         params: {
           id,
-          methodName: this.buildMethodName('isVisible', 'true')
+          methodName: this.buildMethodName('isVisible')
         }
       },
       selector: this.selector
@@ -131,7 +185,7 @@ export class DOMElement {
         ],
         params: {
           id,
-          methodName: this.buildMethodName('isHidden', 'true')
+          methodName: this.buildMethodName('isHidden')
         }
       },
       selector: this.selector
@@ -194,13 +248,13 @@ export class DOMElement {
             fact: 'browser',
             path: '$.elements[*].id',
             operator: 'containsEvery',
-            value: id,
-            params: {
-              id,
-              methodName: this.buildMethodName('hasId', id)
-            }
+            value: id
           }
-        ]
+        ],
+        params: {
+          id,
+          methodName: this.buildMethodName('hasId', id)
+        }
       },
       selector: this.selector
     });
@@ -226,14 +280,15 @@ export class DOMElement {
           },
           {
             fact: 'browser',
-            operator: 'equal',
+            operator: 'containsEvery',
             path: '$.elements[*].tagName',
-            value: type,
-            params: {
-              method: this.buildMethodName('isTagType', type)
-            }
+            value: type
           }
-        ]
+        ],
+        params: {
+          id,
+          methodName: this.buildMethodName('isTagType', type)
+        }
       },
       selector: this.selector
     });
@@ -243,11 +298,15 @@ export class DOMElement {
   // Utils & Helpers
   // -----
 
-  private buildMethodName (method: string, value: string | string[]) {
+  private buildMethodName (method: string, value?: string | string[]) {
     return DOMElement.buildMethodName(this.selector, method, value);
   }
 
-  private static buildMethodName (selector: string, method: string, value: string | string[]) {
-    return `query(${selector}).${method}(${_.isArray(value) ? value.join(',') : value})`;
+  private static buildMethodName (selector: string, method: string, value?: string | string[]) {
+    let val = '';
+    if (_.isString(value)) {
+      val = value;
+    }
+    return `query(${selector}).${method}(${val})`;
   }
 }
