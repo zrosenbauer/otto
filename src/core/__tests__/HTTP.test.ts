@@ -2,7 +2,7 @@ import { Action } from '@bluenova/otto-browser';
 
 import { HTTP } from '../HTTP';
 
-describe('constructor', () => {
+describe('navigate', () => {
   it('adds base navigation', () => {
     const actions: Action[] = [];
 
@@ -10,10 +10,12 @@ describe('constructor', () => {
       actions.push(action);
     }
 
-    new HTTP({
+    const http = new HTTP({
       addAction,
       url: 'http://localhost:8080/test'
     });
+
+    http.navigate();
 
     expect(actions)
       .toEqual([{

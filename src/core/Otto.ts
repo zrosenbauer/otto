@@ -47,9 +47,30 @@ export class Otto {
    * @returns HTTP
    */
   public navigate (url: string): HTTP {
+    const http = new HTTP({
+      addAction: this.addAction,
+      url,
+      method: 'GET'
+    });
+
+    http.navigate();
+    return http;
+  }
+
+  /**
+   * Get a request & response object. This will only be used to run assertions
+   * against the request object. If you want to actually make a request you
+   * will need to use the `navigate` method or other request methods.
+   * @param url
+   * @param method
+   * @param body
+   */
+  public request (url: string, method = 'GET', body?: unknown): HTTP {
     return new HTTP({
       addAction: this.addAction,
-      url
+      url,
+      method,
+      body
     });
   }
 
@@ -60,7 +81,7 @@ export class Otto {
     // @todo automatically start server if not running already OR proxy to Cloud
 
     const result = await axios.post(`${URL_LOCAL_SERVER}/run`, {
-      runTime: 'webkit',
+      runTime: 'chromium',
       actions: this.actions
     });
 
@@ -78,6 +99,9 @@ export class Otto {
   // Utils & Helpers
   // -----
 
+  // @todo We NEED to use the underlying jest messaging pattern
+  // @todo We NEED to return the diff and print out to help with debugging
+  // @todo We NEED to show the correct location of the failure (test file)
   private handleResults (result: Result) {
     const failureEvents = _.compact(_.flatMap(result.actions, 'rule'));
     if (failureEvents.length) {

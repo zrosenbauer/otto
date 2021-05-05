@@ -17,7 +17,9 @@ const config: Config.InitialOptions = {
   },
   collectCoverageFrom: [
     './src/**/*',
-    '!./src/**/__otto__/*'
+    '!./src/**/__otto__/*',
+    '!./src/cli.ts',
+    '!./src/commands/*'
   ]
 };
 
