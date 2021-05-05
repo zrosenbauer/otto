@@ -78,7 +78,7 @@ export class DOMElement {
   }
 
   /**
-   * Send an ucheck event to a checkbox input.
+   * Send an uncheck event to a checkbox input.
    */
   public uncheck (): DOMElement {
     const id = uuid();
