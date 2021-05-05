@@ -1,4 +1,4 @@
-# otto
+# Otto
 
 [![CI](https://github.com/bluenovaio/otto/actions/workflows/ci.yaml/badge.svg)](https://github.com/bluenovaio/otto/actions/workflows/ci.yaml)
 [![Publish](https://github.com/bluenovaio/otto/actions/workflows/publish.yaml/badge.svg)](https://github.com/bluenovaio/otto/actions/workflows/publish.yaml)
