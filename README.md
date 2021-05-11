@@ -24,7 +24,7 @@ yarn add @bluenova/otto
 
 The `otto` package contains a cli tool in addition to utils used to write e2e tests for your applications.
 
-**NOTE:** Currently you MUST `git clone git@github.com:bluenovaio/otto-server.git` and run the server locally using `yarn start`. This requirement will be removed in an upcoming bersion.
+**NOTE:** Currently you MUST `git clone git@github.com:bluenovaio/otto-server.git` and run the server locally using `yarn start`. This requirement will be removed in an upcoming version.
 
 ### Writing Tests
 
