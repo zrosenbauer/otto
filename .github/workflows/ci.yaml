@@ -39,7 +39,7 @@ jobs:
       - name: Stop Servers
         run: pm2 stop all
       - name: Upload Code Coverage
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v2.0.3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
